@@ -2,27 +2,16 @@
 
 public class Metodos {
 
+    private String frase = "Primera frase";
     // Atributos
-    private final String nombre;
-    private int edad;
+    public static void main(String[] args) {
+        Metodos ob1 = new Metodos();
+        Metodos ob2 = new Metodos();
 
-    public Metodos(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
+        ob2.frase = "Segunda frase";
 
-    public void mostrarDatos() {
-        System.out.println("El nombre es: "+nombre);
-        System.out.println("El edad es: "+edad);
-
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad ){
-        this.edad = edad;
+        System.out.println(ob1.frase);
+        System.out.println(ob2.frase);
     }
 
 }
