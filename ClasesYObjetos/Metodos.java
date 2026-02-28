@@ -1,28 +1,19 @@
+// Clase tipo persona 
 
 public class Metodos {
     //Atributos
+    String nombre;
+    int edad;
 
-    // Métodos
-
-    // Método para sumar ambos números
-    public int sumar(int numero1, int numero2) {
-        int suma = numero1+numero2;
-        return suma; 
-    }
-    // Método para restar ambos números
-    public int restar(int numero1, int numero2) {
-        int resta = numero1-numero2;
-        return resta;
-    }
-    // Método para multiplicar ambos números
-    public int multiplicar(int numero1, int numero2) {
-        int multiplicacion = numero1*numero2;
-        return multiplicacion;
-    }
-    // Método para dividir ambos números
-    public int dividir(int numero1, int numero2) {
-        int division = numero1/numero2;
-        return division;
+    // Métodos en el constructor no se ponen los tipos de valor de retorno
+    // Método constructor
+    public Metodos(String _nombre, int _edad) {
+        nombre = _nombre;
+        edad = _edad;
     }
 
+    public void mostrarDatos() {
+        System.out.println("El nombre es: "+nombre);
+        System.out.println("La edad es: "+edad);
+    }
 }

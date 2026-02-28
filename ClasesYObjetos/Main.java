@@ -1,16 +1,10 @@
 
-import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args){
-        Metodos op = new Metodos();
-        int n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número:"));
-        int n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número:"));
-        
-        System.out.println("La suma es: "+op.sumar(n1, n2));
-        System.out.println("La resta es: "+op.restar(n1, n2));
-        System.out.println("La multiplicación es: "+op.multiplicar(n1, n2));
-        System.out.println("La división es: "+op.dividir(n1, n2));
+        Metodos p1 = new Metodos("Michael",27);
+
+        p1.mostrarDatos();
 
     }
 }
