@@ -1,28 +1,26 @@
-// Clase tipo persona 
+// Clase 1
 
 public class Metodos {
 
     // Atributos
-    String nombre;
-    int edad;
-    String dni;
+    private  int edad;
+    private String nombre;
 
-    // Métodos
-    public Metodos(String nombre, int edad) {
-        this.nombre = nombre;
+    // Método Setter: establecemos la edad
+    public void setEdad(int edad) {
         this.edad = edad;
     }
-    public Metodos(String dni) {
-        this.dni = dni;
+
+    // Método Getter: establecemos la edad
+    public int getEdad() {
+        return edad;
     }
 
-    public void correr(){ 
-        System.out.print("Soy "+nombre+", tengo "+edad+" años y estoy corriendo una maratón");
+    public String getNombre() {
+        return nombre;
     }
 
-    public void correr(int km) {
-        System.out.println(" y He corrido "+km+" kilometros");
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
-
-
 }
