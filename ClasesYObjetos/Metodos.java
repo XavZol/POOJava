@@ -7,9 +7,9 @@ public class Metodos {
 
     // Métodos en el constructor no se ponen los tipos de valor de retorno
     // Método constructor
-    public Metodos(String _nombre, int _edad) {
-        nombre = _nombre;
-        edad = _edad;
+    public Metodos(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
 
     public void mostrarDatos() {
