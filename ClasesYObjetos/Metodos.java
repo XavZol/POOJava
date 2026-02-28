@@ -1,36 +1,25 @@
 // Clase 1
-/*Construir un programa que permita dirigir el movimiento de un objeto dentro de un tablero y actualice su posición
-dentro del mismo. Los movimiento posibles son ARRIBA,ABAJO, IZQUIERDA Y DERECHA. Tras cada movimiento el programa mostrará
-la nueva dirección elegida y las coordenadas de situación del objeto dentro del tablero */
+/*Construir un programa que dada una serie de vehículos caracterizados por su marca, modelo y precio, imprima las 
+propiedades del vehículo más barato. Para ello, se deberán leer por teclado las características de cada vehículo
+y crear una clase que represente cada uno de ellos */
 
 public class Metodos {
     // Atributos
-    private int x;
-    private int y;
+        private String marca;
+        private String modelo;
+        private float precio;
 
-    // Constructor
-    public Metodos(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+        // Vehículo  Constructor
+        public Metodos(String marca, String modelo, float precio) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.precio = precio;
+        }
 
-    public void moverArriba(int incremento) {
-        y += incremento;
-    }
-    public void moverAbajo(int incremento) {
-        y -= incremento;
-    }
-
-    public void moverDerecha(int incremento) {
-        x += incremento;
-    }
-    public void moverIzquierda(int incremento) {
-        x -= incremento;
-    }
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
+        public float getPrecio() {
+            return precio;
+        }
+        public String mostrarDatos() {
+            return "Marca: "+marca+"\nModelo: "+modelo+"\nPrecio: "+precio+"\n";
+        }
 }

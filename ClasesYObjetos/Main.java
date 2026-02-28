@@ -4,47 +4,46 @@ import java.util.Scanner;
 // clase 2
 public class Main {
 
+    public static int indiceCocheMBarato(Metodos coches[]) {
+        float precio;
+        int indice = 0;
+
+        precio = coches[0].getPrecio();
+        for(int i=1; i<coches.length; i++) {
+            if(coches[i].getPrecio() < precio) {
+                precio = coches[i].getPrecio();
+                indice = i;
+            }   
+        }
+        return indice;
+    } 
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Metodos t1;
-        int x, y, opcion, incremento=0;
+        String marca, modelo;
+        float precio;
+        int numeroVehiculos, indiceBarato;
 
-        System.out.print("Digite la coordenada inicial de X: ");
-        x = entrada.nextInt();
-        System.out.print("Digite la coordenada inicial de Y: ");
-        y = entrada.nextInt();
+        System.out.print("Digite la cantidad de Vehículos: ");
+        numeroVehiculos = entrada.nextInt();
+        // Vehículos
+        Metodos coches[] = new Metodos[numeroVehiculos];
 
-        // Posicion inicial del objeto
-        t1 = new Metodos(x,y);
+        for(int i=0; i<coches.length; i++) {
+            entrada.nextLine();
+            System.out.println("\nDigite las caracteristicas del Coche "+(i+1)+":");
+            System.out.print("Introduzca Marca: ");
+            marca = entrada.nextLine();
+            System.out.print("Introduzca Modelo: ");
+            modelo = entrada.nextLine();
+            System.out.print("Introduzca Precio: ");
+            precio = entrada.nextFloat();
 
-        do {
-            System.out.println("\n\t.:MENU:.");
-            System.out.println("1. Mover hacia ARRIBA");
-            System.out.println("2. Mover hacia ABAJO");
-            System.out.println("3. Mover hacia la DERECHA");
-            System.out.println("4. Mover hacia la IZQUIERDA");
-            System.out.println("5. Salir del Programa");
-            System.out.print("Digite la opcion: ");
-            opcion = entrada.nextInt();
-
-            if(opcion != 5) {
-                System.out.print("\nDigite la cantidad de espaciosa moverse: ");
-                incremento = entrada.nextInt();
-            }
-
-            switch(opcion) {
-                case 1: t1.moverArriba(incremento); break;
-                case 2: t1.moverAbajo(incremento); break;
-                case 3: t1.moverDerecha(incremento); break;
-                case 4: t1.moverIzquierda(incremento); break;
-                case 5: break;
-                default: System.out.println("Error, se equivoco de opción dentro del menú"); break;
-            }
-
-            System.out.println("\nPosición Actual(X,Y): ("+t1.getX()+" , "+t1.getY()+")");
-
-        } while(opcion != 5);
-
-
+            // el Vehiculo
+            coches[i] = new Metodos(marca, modelo, precio);
+        }
+        indiceBarato = indiceCocheMBarato(coches);
+        System.out.print("\nEl coche más barato es: ");
+        System.out.print(coches[indiceBarato].mostrarDatos());
     }
 }
