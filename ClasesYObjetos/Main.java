@@ -2,13 +2,11 @@
 
 public class Main {
     public static void main(String[] args){
-        Metodos objeto1 = new Metodos();
-        Metodos objeto2 = new Metodos();
+        Metodos persona1 = new Metodos("Alan",27);
 
-        objeto1.setEdad(10);
-        System.out.println("La edad es: "+objeto1.getEdad());
 
-        objeto2.setNombre("Naomi");
-        System.out.println("El nombre es: "+objeto2.getNombre());
+        persona1.setEdad(22);
+
+        persona1.mostrarDatos();
     }
 }

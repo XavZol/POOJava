@@ -3,24 +3,26 @@
 public class Metodos {
 
     // Atributos
-    private  int edad;
-    private String nombre;
+    private final String nombre;
+    private int edad;
 
-    // Método Setter: establecemos la edad
-    public void setEdad(int edad) {
+    public Metodos(String nombre, int edad) {
+        this.nombre = nombre;
         this.edad = edad;
     }
 
-    // Método Getter: establecemos la edad
+    public void mostrarDatos() {
+        System.out.println("El nombre es: "+nombre);
+        System.out.println("El edad es: "+edad);
+
+    }
+
     public int getEdad() {
         return edad;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setEdad(int edad ){
+        this.edad = edad;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
 }
