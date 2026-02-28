@@ -1,10 +1,6 @@
-import javax.swing.JOptionPane;
 
 public class Metodos {
     //Atributos
-
-    int numero1;
-    int numero2;
     int suma;
     int resta;
     int multiplicacion;
@@ -12,26 +8,20 @@ public class Metodos {
 
     // Métodos
 
-    // Método para pedirle usuario que nos digite 2 números
-    public void leerNumeros() {
-        numero1 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
-        numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
-    }
-
     // Método para sumar ambos números
-    public void sumar() {
+    public void sumar(int numero1, int numero2) {
         suma = numero1+numero2;
     }
     // Método para restar ambos números
-    public void restar() {
+    public void restar(int numero1, int numero2) {
         resta = numero1-numero2;
     }
     // Método para multiplicar ambos números
-    public void multiplicar() {
+    public void multiplicar(int numero1, int numero2) {
         multiplicacion = numero1*numero2;
     }
     // Método para dividir ambos números
-    public void dividir() {
+    public void dividir(int numero1, int numero2) {
         division = numero1/numero2;
     }
 
