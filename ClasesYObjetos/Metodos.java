@@ -1,25 +1,27 @@
 // Clase 1
-/*Construir un programa que dada una serie de vehículos caracterizados por su marca, modelo y precio, imprima las 
-propiedades del vehículo más barato. Para ello, se deberán leer por teclado las características de cada vehículo
-y crear una clase que represente cada uno de ellos */
+/*Construir un programa para una competencia de atletismo, el programa debe gestiionar una serie de atletas
+caracterizados por su número de atleta, nombre y tiempo de carrera, al final el programa debe mostrar los datos del atleta ganador
+de la carrera */
 
 public class Metodos {
     // Atributos
-        private String marca;
-        private String modelo;
-        private float precio;
+    private int numeroAtleta;
+    private String nombre;
+    private float tiempoCarrera;
 
-        // Vehículo  Constructor
-        public Metodos(String marca, String modelo, float precio) {
-            this.marca = marca;
-            this.modelo = modelo;
-            this.precio = precio;
-        }
+    // Constructor Atleta
+    public Metodos(int numeroAtleta, String nombre, float tiempoCarrera) {
+        this.numeroAtleta = numeroAtleta;
+        this.nombre = nombre;
+        this.tiempoCarrera = tiempoCarrera;
+    }
 
-        public float getPrecio() {
-            return precio;
-        }
-        public String mostrarDatos() {
-            return "Marca: "+marca+"\nModelo: "+modelo+"\nPrecio: "+precio+"\n";
-        }
+    public float getTiempoCarrera() {
+        return tiempoCarrera;
+    }
+
+    public String mostrarDatosGanador() {
+        return "Numero de Atleta: "+numeroAtleta+"\nNombre de Atleta: "+nombre+"\nTiempo de Carrera: "+tiempoCarrera+"\n";
+    }
+    
 }
