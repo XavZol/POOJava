@@ -1,12 +1,24 @@
+
+import javax.swing.JOptionPane;
+
 // clase 2
 
 public class Main {
     public static void main(String[] args){
-        Metodos persona1 = new Metodos("Alan",27);
+        Metodos  c1;    // Cuadrilatero 
+        float lado1, lado2;
 
+        lado1 = Float.parseFloat(JOptionPane.showInputDialog("Digite el lado 1 del cuadrilátero: "));
+        lado2 = Float.parseFloat(JOptionPane.showInputDialog("Digite el lado 2 del cuadrilátero: "));
 
-        persona1.setEdad(22);
+        if(lado1 == lado2) {
+            c1 = new Metodos(lado1);
+        }
+        else {
+            c1 = new Metodos(lado1, lado2);
+        }
 
-        persona1.mostrarDatos();
+        System.out.println("El perimetro es: "+c1.getPerimetro());
+        System.out.println("El area es: "+c1.getArea());
     }
 }
